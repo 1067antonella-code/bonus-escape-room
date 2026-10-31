@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Bonus Kit dell'Apprendista</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Nunito:wght@400;700;800&display=swap">
+<style>
+:root{--bg:#0b1030;--bg2:#141a47;--ink:#fff1d2;--mut:#b9bfe6;--gold:#f0bf5a;--gold2:#c8962e;--red:#e2554f;--ok:#6fd49a;--line:rgba(240,191,90,.35);color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(1000px 600px at 75% -5%,#2a3585 0,transparent 60%),var(--bg);color:var(--ink);font:400 17px/1.55 Nunito,system-ui,sans-serif;padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px))}
+.w{max-width:960px;margin:0 auto}
+h1,h2,h3{font-family:Cinzel,Georgia,serif;text-wrap:balance;margin:0}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center;padding-block:48px 36px}
+.eb{text-transform:uppercase;letter-spacing:.18em;font-size:12px;font-weight:800;color:var(--gold);margin:0 0 10px}
+h1{font-size:clamp(32px,5.5vw,54px);line-height:1.08;margin-bottom:14px;text-shadow:0 0 30px rgba(240,191,90,.3)}
+.lead{color:var(--mut);font-size:18px;max-width:50ch;margin:0 0 20px}
+.btn{display:inline-flex;align-items:center;justify-content:center;font:800 16px Nunito,sans-serif;padding:13px 22px;border-radius:14px;border:2px solid var(--gold);min-height:46px;cursor:pointer;text-decoration:none;background:linear-gradient(180deg,#ffd77f,#e0a63c);color:#241800;box-shadow:0 5px 0 #9a6c16,0 10px 24px rgba(0,0,0,.35);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}.btn:active{transform:translateY(4px);box-shadow:0 1px 0 #9a6c16}
+.btn[disabled]{opacity:.6;cursor:wait}
+.book{perspective:900px;display:grid;place-items:center}
+.book img{width:min(260px,70%);height:auto;border-radius:4px 10px 10px 4px;box-shadow:-8px 14px 30px rgba(0,0,0,.6),inset 6px 0 10px rgba(0,0,0,.4);transform:rotateY(-22deg) rotateX(4deg);transition:transform .4s}
+.book:hover img{transform:rotateY(-6deg) rotateX(2deg)}
+section{padding-block:30px}
+h2{font-size:clamp(24px,3.6vw,32px);color:var(--gold);margin-bottom:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:16px}
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:16px;padding:16px;min-width:0}
+.card h3{font-size:16px;margin-bottom:6px;color:var(--ink)}
+.card p{margin:0;font-size:15px;color:var(--mut)}
+.card .n{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--gold);color:#241800;font-weight:900;margin-bottom:8px}
+.prev{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.prev img{width:100%;height:auto;border-radius:8px;box-shadow:0 8px 20px rgba(0,0,0,.45);display:block;background:#fff}
+.form{background:var(--bg2);border:2px solid var(--gold);border-radius:20px;padding:22px;max-width:560px;margin-inline:auto}
+.form label{display:block;font-weight:800;margin:12px 0 5px}
+input[type=text],input[type=email]{width:100%;font:700 17px Nunito,sans-serif;padding:12px 14px;border-radius:12px;border:2px solid var(--line);background:#0e1440;color:var(--ink)}
+input:focus{outline:3px solid var(--gold);outline-offset:1px}
+.form label.chk{font-weight:400}.chk{display:flex;gap:10px;align-items:flex-start;margin:14px 0;font-size:14px;color:var(--mut)}
+.chk input{width:22px;height:22px;flex:none;margin-top:2px;accent-color:#f0bf5a}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.msg{margin:10px 0 0;font-size:15px;font-weight:700}.msg.err{color:#ff958f}
+.done{text-align:center;padding:10px 0}
+.done h3{font-size:24px;color:var(--ok);margin-bottom:8px}
+.done p{color:var(--mut);margin:0 0 16px}
+details{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:800}
+details p{margin:8px 0 0;color:var(--mut);font-size:15px}
+.foot{text-align:center;color:var(--mut);font-size:13px;padding-block:30px 50px}
+[hidden]{display:none!important}
+@media (max-width:760px){.hero{grid-template-columns:1fr;padding-top:30px}.book{order:-1}.prev{grid-template-columns:1fr 1fr 1fr;gap:8px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+</head>
+<body>
+<div class="w">
+  <header class="hero">
+    <div>
+      <p class="eb">Bonus riservato a chi ha il libro</p>
+      <h1>Il Kit dell'Apprendista</h1>
+      <p class="lead">Cinque schede da stampare per giocare ancora con Barnaba e Macchia: strumenti per i cifrari, il quaderno delle parole, dieci stanze segrete e il diploma finale.</p>
+      <a class="btn" href="#ricevi">Ricevi il kit gratis</a>
+    </div>
+    <div class="book"><img src="img/copertina.jpg" alt="Copertina del libro La Biblioteca di Mezzanotte, Calendario dell'Avvento Escape Room" width="640" height="960"></div>
+  </header>
+
+  <section>
+    <h2>Cosa trovi dentro</h2>
+    <div class="grid">
+      <div class="card"><span class="n">1</span><h3>Strumenti del Bibliotecario</h3><p>Alfabeto, Morse, specchio e Cesare: tutto per decifrare.</p></div>
+      <div class="card"><span class="n">2</span><h3>Quaderno delle Parole Custodi</h3><p>Dove segnare le 24 parole e scoprire la frase segreta.</p></div>
+      <div class="card"><span class="n">3</span><h3>Dieci Stanze Segrete</h3><p>Dieci enigmi in più, con la parola finale nascosta.</p></div>
+      <div class="card"><span class="n">4</span><h3>Aiuti e Soluzioni</h3><p>Per i genitori, o per sbirciare quando ci si blocca.</p></div>
+      <div class="card"><span class="n">5</span><h3>Diploma</h3><p>Da compilare con il proprio nome e appendere in camera.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Un'occhiata alle schede</h2>
+    <div class="prev">
+      <img src="img/prev-01.jpg" alt="Anteprima della scheda Strumenti del Bibliotecario" loading="lazy">
+      <img src="img/prev-03.jpg" alt="Anteprima della scheda Le Dieci Stanze Segrete" loading="lazy">
+      <img src="img/prev-05.jpg" alt="Anteprima del diploma" loading="lazy">
+    </div>
+  </section>
+
+  <section id="ricevi">
+    <h2>Ricevi il tuo kit</h2>
+    <div class="form" id="box">
+      <form id="f" novalidate autocomplete="on">
+        <div id="fields">
+          <p style="margin:0;color:var(--mut)">Scrivi nome ed email: ti mostro subito il link ai PDF da scaricare e stampare.</p>
+          <label for="nome">Il tuo nome</label>
+          <input id="nome" name="nome" type="text" maxlength="60" autocomplete="given-name" placeholder="Per esempio: Giulia">
+          <label for="email">La tua email</label>
+          <input id="email" name="email" type="email" maxlength="120" autocomplete="email" placeholder="nome@esempio.it">
+          <div class="hp" aria-hidden="true"><label>Non compilare<input id="web" name="web" type="text" tabindex="-1" autocomplete="off"></label></div>
+          <label class="chk" for="ok"><input id="ok" type="checkbox"><span>Accetto di ricevere il kit e, ogni tanto, novità sui libri di Lella Racconta. Posso cancellarmi quando voglio. I dati servono solo a questo.</span></label>
+          <button class="btn" type="submit" id="go" style="width:100%">Mostrami il link ai PDF</button>
+          <p class="msg" id="msg" role="alert"></p>
+        </div>
+        <div class="done" id="done" hidden>
+          <h3>Ecco il tuo kit!</h3>
+          <p>Si apre su Google Drive: scarica i 5 PDF e stampali in A4, scala 100%.</p>
+          <a class="btn" id="dl" href="#" target="_blank" rel="noopener">Apri la cartella dei PDF</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section>
+    <h2>Domande frequenti</h2>
+    <details><summary>Come stampo le schede?</summary><p>Apri il PDF, scegli Stampa, formato A4 e scala 100%. Non adattare alla pagina, altrimenti le caselle si rimpiccioliscono.</p></details>
+    <details><summary>A che età è adatto?</summary><p>Come il libro: dagli 8 anni. Con un adulto vicino va bene anche dai 6-7.</p></details>
+    <details><summary>Devo fare prima il libro?</summary><p>Conviene finire il calendario, ma le Stanze Segrete si possono fare anche da sole. Le schede degli strumenti servono per entrambi.</p></details>
+    <details><summary>Cosa fate con la mia email?</summary><p>La uso solo per inviarti il bonus e, ogni tanto, avvisarti di nuovi libri. Puoi chiedere di essere cancellata in qualsiasi momento rispondendo a una mia email.</p></details>
+  </section>
+  <p class="foot">La Biblioteca di Mezzanotte · Lella Racconta</p>
+</div>
+
+<script>
+/* ===== DA COMPILARE ===== */
+var DRIVE_URL="https://drive.google.com/drive/folders/19uPDJVYYeiQD29QiNcp1A7MU1yRg3zer?usp=sharing";
+var SHEET_ENDPOINT=""; /* URL dell'app web di Google Apps Script (vedi ISTRUZIONI) */
+/* ======================== */
+(function(){
+var f=document.getElementById('f'),msg=document.getElementById('msg'),go=document.getElementById('go');
+function show(){document.getElementById('fields').hidden=true;document.getElementById('done').hidden=false;document.getElementById('dl').href=DRIVE_URL;document.getElementById('done').scrollIntoView({block:'center'})}
+f.addEventListener('submit',function(e){
+ e.preventDefault();msg.className='msg';msg.textContent='';
+ var n=document.getElementById('nome').value.trim(),m=document.getElementById('email').value.trim();
+ if(!n){msg.className='msg err';msg.textContent='Scrivi il tuo nome.';return}
+ if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(m)){msg.className='msg err';msg.textContent='Controlla l\'email: sembra incompleta.';return}
+ if(!document.getElementById('ok').checked){msg.className='msg err';msg.textContent='Per continuare serve spuntare la casella.';return}
+ if(document.getElementById('web').value){show();return}
+ if(!SHEET_ENDPOINT){show();return}
+ go.disabled=true;go.textContent='Un attimo...';
+ var body=new URLSearchParams({nome:n,email:m,fonte:'bonus-kit',consenso:'si'});
+ fetch(SHEET_ENDPOINT,{method:'POST',mode:'no-cors',body:body}).then(show).catch(function(){show()}).finally(function(){go.disabled=false;go.textContent='Mostrami il link ai PDF'});
+});
+})();
+</script>
+</body>
+</html>
